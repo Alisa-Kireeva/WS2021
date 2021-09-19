@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<style>
+    body {
+        margin: 10px;
+        font-size: 16px;
+        font-family: Lucida Sans, sans-serif;
+        color: black;
+        width: 4000px;
+    }
+    
+    div.field {
+        width: 700px;
+        padding: 5px;
+        float: right;
+        text-align: left;
+    }
+    
+    select {
+        width: 353px;
+        height: 25px;
+        margin-left: 265px;
+        color: black;
+        font-size: 16px;
+        font-family: Lucida Sans, sans-serif;
+    }
+    
+    form {
+        width: 700px;
+        display: inline-block;
+    }
+    
+    input[type="text"] {
+        margin-left: 350px;
+        width: 350px;
+    }
+    
+    span {
+        color: red;
+    }
+    
+    .last {
+        padding-left: 10%;
+    }
+    
+    .radio {
+        position: relative;
+        margin-left: 9%;
+    }
+    
+    .radio_input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+    }
+    
+    .radio_label {
+        padding-left: 25px;
+        font-size: 1rem;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: Lucida Sans, sans-serif;
+    }
+    
+    .radio_label:before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: border .1s linear;
+    }
+    
+    .radio_label:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #49d120;
+        border-radius: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 2;
+        transition: opacity .1s linear;
+    }
+    
+    .radio_input:checked+.radio_label:before {
+        border-color: #319612;
+    }
+    
+    .radio_input:checked+.radio_label:after {
+        opacity: 1;
+    }
+    
+    .box {
+        position: relative;
+        margin-bottom: 1rem;
+        margin-left: 9%;
+    }
+    
+    .box_input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+    }
+    
+    .box_label {
+        padding-left: 25px;
+        font-size: 1rem;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: Lucida Sans, sans-serif;
+    }
+    
+    .box_label:before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: border .1s linear;
+    }
+    
+    .box_label:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #49d120;
+        opacity: 0;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 3;
+        transition: opacity .1s linear;
+    }
+    
+    .box_input:checked+.box_label:before {
+        border-color: #319612;
+    }
+    
+    .box_input:checked+.box_label:after {
+        opacity: 1;
+    }
+    
+    .box1 {
+        position: relative;
+        margin-bottom: 1rem;
+        margin-left: 0%;
+    }
+    
+    .box1_input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+        outline: none;
+    }
+    
+    .box1_label {
+        padding-left: 25px;
+        font-size: 1rem;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .box1_label:before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: border .1s linear;
+    }
+    
+    .box1_label:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #49d120;
+        opacity: 0;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 3;
+        transition: opacity .1s linear;
+    }
+    
+    .box1_input:checked+.box1_label:before {
+        border-color: #319612;
+    }
+    
+    .box1_input:checked+.box1_label:after {
+        opacity: 1;
+    }
+    
+    .button {
+        border-color: black;
+        background-color: red;
+        color: white;
+        font-size: 100%;
+        width: 150px;
+        cursor: pointer;
+        display: block;
+        justify-content: space-between;
+        text-align: center;
+        float: left;
+    }
+</style>
+
+<body>
+    <h2>Заказ стенда</h2>
+    <form>
+        <div class="field">
+            <label>Контактное лицо(ФИО)<span>*</span></label>
+            <input type="text" name="" />
+        </div>
+        <div class="field">
+            <label>Должность<span>*</span></label>
+            <input type="text" name="" />
+        </div>
+        <div class="field">
+            <label>Телефон<span>*</span></label>
+            <input type="text" name="" />
+        </div>
+        <div class="field">
+            <label> E-mail<span>*</span></label>
+            <input type="text" name="" />
+        </div>
+    </form><br>
+    <p><b>Экспозиционная площадь:</b></p>
+
+    <p>Площадь<span>*</span>
+        <select name="square">
+        <option value="square1">Необорудованная площадь</option>
+        <option value="square2">Необорудованная площадь1</option>
+        <option value="square3">Необорудованная площадь2</option>
+    </select>
+    </p>
+    <form>
+        <div class="field">
+            <label>Метраж (кв.м)<span>*</span></label>
+            <input type="text" name="" />
+        </div>
+    </form><br>
+    <p><b>Реклама:</b></p>
+    <div>Каталог выставки</div>
+    <div class="box">
+        <input class="box_input" name="" type="checkbox" id="rekl2">
+        <label class="box_label" for="rekl2">Реклама(полный лист)</label>
+    </div>
+    <p>Путеводитель выставки</p>
+    <div class="radio">
+        <input class="radio_input" name="" type="radio" id="rekla">
+        <label class="radio_label" for="rekla">Реклама(полный лист)</label>
+    </div>
+    <div class="radio">
+        <input class="radio_input" name="" type="radio" id="rekla1">
+        <label class="radio_label" for="rekla1">Сноска с логотипом на плане выставки</label>
+    </div>
+    <p>Планировка выставки перед входом в павильон</p>
+    <div class="box">
+        <input class="box_input" name="" type="checkbox" id="rek1">
+        <label class="box_label" for="rek1">Сноска с логотипом на плане выставки</label>
+    </div>
+    <div class="box1">
+        <input class="box1_input" name="" type="checkbox" id="rek3">
+        <label class="box1_label" for="rek3" div style="color:black">Я подтверждаю, что ознакомлен с политикой конфиденциальности<span>*</span></div></label>
+    </div>
+    <br>
+    <form>
+        <input class=" button " type="button " value="Отправить заявку ">
+    </form>
+
+    <div class="last "><span>*</span>&mdash;Эти поля обязательны для заполнения
+    </div>
+
+</body>
+
+</html>
