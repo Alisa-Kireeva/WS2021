@@ -1,310 +1,143 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Document</title>
 </head>
 <style>
+    html,
     body {
-        margin: 10px;
-        font-size: 16px;
-        font-family: Lucida Sans, sans-serif;
-        color: black;
-        width: 4000px;
+        width: 1000px;
+        height: 1000px;
     }
     
-    div.field {
-        width: 700px;
-        padding: 5px;
-        float: right;
-        text-align: left;
+    body {
+        background-color: whitesmoke;
     }
     
-    select {
-        width: 353px;
-        height: 25px;
-        margin-left: 265px;
-        color: black;
-        font-size: 16px;
-        font-family: Lucida Sans, sans-serif;
-    }
-    
-    form {
-        width: 700px;
-        display: inline-block;
-    }
-    
-    input[type="text"] {
-        margin-left: 350px;
-        width: 350px;
-    }
-    
-    span {
-        color: red;
-    }
-    
-    .last {
-        padding-left: 10%;
-    }
-    
-    .radio {
-        position: relative;
-        margin-left: 9%;
-    }
-    
-    .radio_input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        position: absolute;
-    }
-    
-    .radio_label {
-        padding-left: 25px;
-        font-size: 1rem;
-        color: black;
-        cursor: pointer;
-        font-size: 16px;
-        font-family: Lucida Sans, sans-serif;
-    }
-    
-    .radio_label:before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: border .1s linear;
-    }
-    
-    .radio_label:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-color: #49d120;
-        border-radius: 50%;
-        opacity: 0;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        z-index: 2;
-        transition: opacity .1s linear;
-    }
-    
-    .radio_input:checked+.radio_label:before {
-        border-color: #319612;
-    }
-    
-    .radio_input:checked+.radio_label:after {
-        opacity: 1;
-    }
-    
-    .box {
-        position: relative;
-        margin-bottom: 1rem;
-        margin-left: 9%;
-    }
-    
-    .box_input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        position: absolute;
-    }
-    
-    .box_label {
-        padding-left: 25px;
-        font-size: 1rem;
-        color: black;
-        cursor: pointer;
-        font-size: 16px;
-        font-family: Lucida Sans, sans-serif;
-    }
-    
-    .box_label:before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: border .1s linear;
-    }
-    
-    .box_label:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-color: #49d120;
-        opacity: 0;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        z-index: 3;
-        transition: opacity .1s linear;
-    }
-    
-    .box_input:checked+.box_label:before {
-        border-color: #319612;
-    }
-    
-    .box_input:checked+.box_label:after {
-        opacity: 1;
-    }
-    
-    .box1 {
-        position: relative;
-        margin-bottom: 1rem;
-        margin-left: 0%;
-    }
-    
-    .box1_input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        position: absolute;
-        outline: none;
-    }
-    
-    .box1_label {
-        padding-left: 25px;
-        font-size: 1rem;
-        color: black;
-        cursor: pointer;
-    }
-    
-    .box1_label:before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: border .1s linear;
-    }
-    
-    .box1_label:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-color: #49d120;
-        opacity: 0;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        z-index: 3;
-        transition: opacity .1s linear;
-    }
-    
-    .box1_input:checked+.box1_label:before {
-        border-color: #319612;
-    }
-    
-    .box1_input:checked+.box1_label:after {
-        opacity: 1;
-    }
-    
-    .button {
-        border-color: black;
-        background-color: red;
-        color: white;
-        font-size: 100%;
-        width: 150px;
-        cursor: pointer;
-        display: block;
-        justify-content: space-between;
+    h1 {
         text-align: center;
+        color: rgb(34, 34, 77);
+        font-size: 30px;
+        font-family: Roboto Black, sans-serif;
+    }
+    
+    h2 {
+        text-align: center;
+        color: midnightblue;
+        font-size: 20px;
+    }
+    
+    h3 {
+        color: blue;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #navbar {
+        margin: 0;
+        padding: 5px;
+        border-radius: 10px 10px;
+        width: 990px;
+        height: fit-content;
+        background-color: rgb(142, 142, 223);
+        list-style-type: none;
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+    }
+    
+    #navbar a {
+        color: rgba(0, 0, 0, 0.356);
+        padding: 10px 10px;
+        text-decoration: none;
+        font-weight: none;
+        display: inline-block;
+        width: 100px;
+        color: darkblue;
+    }
+    
+    #navbar a:hover {
+        border-radius: 10px 10px;
+        background-color: lightskyblue;
+        width: 100px;
+        height: fit-content;
+        text-align: left;
+        font-size: 14px;
+        color: blueviolet;
+    }
+    
+    .content {
+        height: 300px;
+        width: 600px;
+        border: 3px solid black;
+        padding: 10px;
+        margin-top: 40px;
+    }
+    
+    .logo {
         float: left;
     }
 </style>
 
 <body>
-    <h2>Заказ стенда</h2>
-    <form>
-        <div class="field">
-            <label>Контактное лицо(ФИО)<span>*</span></label>
-            <input type="text" name="" />
-        </div>
-        <div class="field">
-            <label>Должность<span>*</span></label>
-            <input type="text" name="" />
-        </div>
-        <div class="field">
-            <label>Телефон<span>*</span></label>
-            <input type="text" name="" />
-        </div>
-        <div class="field">
-            <label> E-mail<span>*</span></label>
-            <input type="text" name="" />
-        </div>
-    </form><br>
-    <p><b>Экспозиционная площадь:</b></p>
+    <header>
+        <h1>Компания "Фокус"</h1>
+        <h2>Локации для организации фото и видеосъемок</h2>
 
-    <p>Площадь<span>*</span>
-        <select name="square">
-        <option value="square1">Необорудованная площадь</option>
-        <option value="square2">Необорудованная площадь1</option>
-        <option value="square3">Необорудованная площадь2</option>
-    </select>
-    </p>
-    <form>
-        <div class="field">
-            <label>Метраж (кв.м)<span>*</span></label>
-            <input type="text" name="" />
+        <div class="logo">
+            <img src="4.png" alt="" width="100px;">
         </div>
-    </form><br>
-    <p><b>Реклама:</b></p>
-    <div>Каталог выставки</div>
-    <div class="box">
-        <input class="box_input" name="" type="checkbox" id="rekl2">
-        <label class="box_label" for="rekl2">Реклама(полный лист)</label>
-    </div>
-    <p>Путеводитель выставки</p>
-    <div class="radio">
-        <input class="radio_input" name="" type="radio" id="rekla">
-        <label class="radio_label" for="rekla">Реклама(полный лист)</label>
-    </div>
-    <div class="radio">
-        <input class="radio_input" name="" type="radio" id="rekla1">
-        <label class="radio_label" for="rekla1">Сноска с логотипом на плане выставки</label>
-    </div>
-    <p>Планировка выставки перед входом в павильон</p>
-    <div class="box">
-        <input class="box_input" name="" type="checkbox" id="rek1">
-        <label class="box_label" for="rek1">Сноска с логотипом на плане выставки</label>
-    </div>
-    <div class="box1">
-        <input class="box1_input" name="" type="checkbox" id="rek3">
-        <label class="box1_label" for="rek3" div style="color:black">Я подтверждаю, что ознакомлен с политикой конфиденциальности<span>*</span></div></label>
-    </div>
-    <br>
-    <form>
-        <input class=" button " type="button " value="Отправить заявку ">
-    </form>
-
-    <div class="last "><span>*</span>&mdash;Эти поля обязательны для заполнения
-    </div>
-
+        <ul id="navbar">
+            <li>
+                <a href="#">О компании</a>
+                <a href="search.html">Результаты поиска локаций</a>
+                <a href="seat.html">Выбор конкретной зоны из свободных в локации</a>
+                <a href="booking.html ">Страница бронирования</a>
+            </li>
+        </ul>
+    </header>
+    <content>
+        <p><b>Главная цель компании - сохранить самые ярке моменты жизни клиентов на долгие годы</b></p>
+        <p>Клиенты компании «Фокус» имеют возможность забронировать одну из предоставленных локаций для организации фото и видеосъемок.</p>
+        <p>Помимо аренды, компания предоставляет широкий спектр дополнительных услуг, таких как:
+            <ul>
+                <li>услуги фотографов</li>
+                <li>предоставление реквизита для съемок, такси и т.д.</li>
+            </ul>
+            <img src=" promotion2.jpg " alt=" " width="200px; "> <img src="promotion3.jpg " alt=" " width="200px; "> <img src="2.jpg " alt=" " width="200px; ">
+            <p>Чтобы воспользоваться услугами компании необходимо:</p>
+            <ul>
+                <li>1. Выбрать дату и время съемки;</li>
+                <li>2. Выбрать количество участников;</li>
+                <li>3. Выбрать желаемую локацию для съемки, соответствующую условиям выше;</li>
+                <li>4. Зарезервировать конкретные зоны на территории выбранной локации;</li>
+                <li>5. Определить перечень дополнительных услуг;</li>
+                <li>6. Оформить заказ.</li>
+            </ul>
+            <p><b>Девиз компании «Фокус»: Сделай жизнь ярче!</b></p>
+            <p>У нас Вы сможете подобрать подходящий зал для Вашей фотосессии, приобрести подарочные сертификаты и даже сделать съёмку с нашим фотографом! В наших студиях современное осветительное оборудование с множеством светоформирующих насадок, оригинальные
+                декорации, разнообразный реквизит и большой опыт наших сотрудников.</p>
+            <h2>Отзывы клиентов</h2>
+            <img src="10.jpg " alt=" " width="200px; ">
+            <p>
+                <b><em>Алина Спасибо большое!</em> Локация "Черная жемчужина " просто супер!</b> Все в бурных эмоциях, фото получились просто огонь!
+            </p>
+            <img src="11.jpg " alt=" " width="200px; ">
+            <p>
+                <b><em>Марина</em> Долго думала как отпразновать годовщину свадьбы.</b> Увидела фото ваших локаций и влюбилась! Отлично провели время с мужем, сделали кучу фото для инстаграмма и даже распечатали несколько на память) --- Алена и Ко Всё
+                очень понравилось. Воспользовались с девочками услугами вашего фотографа Ильи, теперь фотаемся только у него!
+            </p>
+            <img src="12.jpg " alt=" " width="200px; ">
+            <p>
+                <b><em>Наталия</em> Уже не первый раз устраиваю себе праздник, организуя фотосессию в ваших локациях.</b> Не дорого, а эмоций на весь день.
+            </p>
+            <h3><em>Контакты для связи с нами</em>
+                <p>Телефон: 8 800 333 30 30</p>
+            </h3>
+    </content>
 </body>
 
 </html>
